@@ -1,11 +1,7 @@
 function countBasketPrice(basket) {
-	var qty;
-	var cost;
-	var sum;
-	for (i = 0; i <= basket.length; i++) {
-		cost = basket[i][1];
-		qty = basket[i][2];
-		sum = sum + cost * qty;
+	var sum = 0;
+	for (var i = 0; i < basket.length; i++) {
+		sum += basket[i][1] * basket[i][2];
 	}
 	return sum;
 }
